@@ -1,0 +1,88 @@
+body {
+  border-radius: 20px;
+}
+
+#head {
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.container {
+  padding-left: 40px;
+  padding-right: 40px;
+  /* width: 100px; */
+}
+
+/* button-ext {
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  background: azure;
+  box-shadow: 0px 0px 0px 1px #d4e0e0;
+  display: block;
+}
+
+button-ext:hover {
+  background: rgb(181, 240, 240);
+  cursor: pointer;
+} */
+
+.button-ext {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button-ext span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-ext span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-ext:active {
+  background-color: #ca562b;
+  box-shadow: 0 3px #666;
+  /* transform: translateY(4px); */
+}
+
+.img-ext {
+  margin: auto;
+  width: 100%;
+}
+
+.button-ext:hover span {
+  padding-right: 25px;
+}
+
+.button-ext:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#copy-url {
+  display: none;
+}
+
+#copy-pr {
+  display: none;
+}

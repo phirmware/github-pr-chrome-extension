@@ -1,0 +1,31 @@
+{ 
+  "manifest_version": 2,
+  "name": "outlier github PR formatter",
+  "description": "Formats your PR for the outlier repo in the format for #engineering-prs on the slack channel",
+  "version": "1",
+  "author": "phirmware",
+  "browser_action": {
+    "default_icon": "images/outlier.png",
+    "default_title": "Create a PR post",
+    "default_popup": "html/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://github.com/outlier-org/outlier-api/pull/*"
+      ],
+      "js": [
+        "scripts/content.js"
+      ],
+      "css": [
+        "css/popup.css"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": ["scripts/events.js"]
+  },
+  "permissions": [
+    "clipboardWrite"
+  ]
+}
